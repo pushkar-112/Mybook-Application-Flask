@@ -11,12 +11,15 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="../static/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@800&display=swap" rel="stylesheet">
     <title>Home Page</title>
   </head>
-  <body>
-    <nav class="navbar navbar-expand-lg bg-light">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="/home">Mybook</a>
+  <body style="background-color: rgb(249, 251, 253)">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div class="container-fluid mt-3">
+        <a class="navbar-brand " href="/home" style="font-family: 'Merriweather Sans', sans-serif;"><h4>Mybook</h4></a>
         <button
           class="navbar-toggler"
           type="button"
@@ -52,9 +55,9 @@
               >
             </li>
           </ul>
-          <ul class="navbar-nav me-2 mb-2 mb-lg-0">
+          <ul class="navbar-nav me-3 mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class=" btn btn-outline-primary d-flex" type="submit" href="{{ url_for('logout') }}">
+              <a class=" btn btn-outline-light d-flex" type="submit" href="{{ url_for('logout') }}">
                 Logout
               </a>
             </li>
@@ -62,16 +65,16 @@
         </div>
       </div>
     </nav>
-    <div class="container-fluid" style="width: 25%">
+    <div class="container-fluid " style="width: 25%">
       <div>
         {% for post in posts %}
-        <div class="card mt-4" style="width: 25rem">
+        <div class="card mt-5" style="width: 25rem ">
           <img
             src="{{ url_for('static', filename='posts/' + post.image_file) }}"
             class="card-img-top"
             alt="..."
           />
-          <div class="card-body">
+          <div class="card-body" >
             <a class="mr-2" href="#">{{ post.author.username }}</a>
             <small class="text-muted float-right"
               >{{ post.date_posted.strftime('%d-%m-%y') }}</small

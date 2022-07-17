@@ -10,12 +10,15 @@
       integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
       crossorigin="anonymous"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@800&display=swap" rel="stylesheet">
     <title>Landing Page</title>
   </head>
-  <body>
-    <nav class="navbar navbar-expand-lg bg-light">
-      <div class="container-fluid mt-2 ms-5">
-        <a class="navbar-brand" href="/landing">Mybook</a>
+  <body style="background-color: rgb(249, 251, 253)">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div class="container-fluid mt-3 ms-5">
+        <a class="navbar-brand " href="/landing" style="font-family: 'Merriweather Sans', sans-serif;"><h4>Mybook</h4></a>
         <button
           class="navbar-toggler"
           type="button"
@@ -29,13 +32,10 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0"> 
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">About</a>
-            </li>
           </ul>
           <ul class="navbar-nav me-2 mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class=" btn btn-outline-primary d-flex" type="submit" href="{{ url_for('signup') }}">
+              <a class=" btn btn-outline-light d-flex mb-1" type="submit" href="{{ url_for('signup') }}">
                 Sign up
               </a>
             </li>
@@ -43,11 +43,11 @@
         </div>
       </div>
     </nav>
-
     <div class="container">
-      <div class="row">
+      <div class="row pe-3 ps-3">
         <div class="col-sm">
-          <img src="" alt="image" />
+          <h4 class="mt-5 pt-5 pb-3 " style=" color:rgb(2, 80, 145)">Mybook helps you connect and share with people in life</h4>
+          <img src="../static/images/fb-home.png" class="img-fluid" alt=" image">
         </div>
         <div class="col-sm">
           <div class="container">
